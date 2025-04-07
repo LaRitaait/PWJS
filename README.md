@@ -3,7 +3,7 @@
 - [Lab 1](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab1) - HTML i CSS
 - [Lab 2](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab2) - Bootstrap
 - [Lab 3](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab3)
-- [Lab 4](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab4)
+- [Lab 4](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab4) - Formularz
 
   ## Link do strony
 
