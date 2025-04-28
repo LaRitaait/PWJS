@@ -95,7 +95,6 @@
       color: #555;
     }
 
-    /* Animacja dla przycisków */
     @keyframes buttonAnimation {
       0% {
         transform: scale(1);
@@ -119,7 +118,6 @@
     <div id="counter"></div>
     <div id="question">Kliknij "Rozpocznij quiz", aby rozpocząć.</div>
 
-    <!-- Ukryte pole odpowiedzi -->
     <div id="answerInputContainer">
       <input type="text" id="answerInput" placeholder="Wpisz swoją odpowiedź">
     </div>
@@ -208,7 +206,6 @@
       location.reload()
     }
 
-    // ENTER jako "Następne pytanie"
     document.addEventListener("keydown", function (event) {
       const nextBtnVisible = document.getElementById("nextBtn").style.display !== "none"
       if (event.key === "Enter" && nextBtnVisible) {
