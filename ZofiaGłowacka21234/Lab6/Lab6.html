@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz DOM – Projekt 1</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f7b42c, #fc575e);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+    }
+
+    #Projekt1 {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    h2 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    #question {
+      font-size: 24px;
+      margin: 20px 0;
+      color: #333;
+    }
+
+    #answerInputContainer {
+      display: none;
+      margin-bottom: 20px;
+    }
+
+    #answerInput {
+      padding: 10px;
+      width: 80%;
+      font-size: 18px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    #answerInput:focus {
+      border-color: #4CAF50;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      transform: translateY(1px);
+    }
+
+    #score {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    #nextBtn,
+    #restartBtn {
+      display: none;
+    }
+
+    #counter {
+      font-size: 18px;
+      color: #555;
+    }
+
+    /* Animacja dla przycisków */
+    @keyframes buttonAnimation {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="Projekt1">
+    <h2>Quiz wiedzy ogólnej</h2>
+    <div id="counter"></div>
+    <div id="question">Kliknij "Rozpocznij quiz", aby rozpocząć.</div>
+
+    <!-- Ukryte pole odpowiedzi -->
+    <div id="answerInputContainer">
+      <input type="text" id="answerInput" placeholder="Wpisz swoją odpowiedź">
+    </div>
+
+    <br>
+    <button id="startBtn" onclick="startQuiz()">Rozpocznij quiz</button>
+    <button id="nextBtn" onclick="nextQuestion()">Następne pytanie</button>
+    <button id="restartBtn" onclick="restartQuiz()">Rozwiąż jeszcze raz</button>
+    <div id="score"></div>
+  </div>
+
+  <script>
+    const questions = [
+      ['Stolica Polski to?', 'Warszawa'],
+      ['Ile to 2 + 2?', '4'],
+      ['Kolor nieba w słoneczny dzień?', 'Niebieski'],
+      ['Największy ocean to?', 'Spokojny'],
+      ['Który pierwiastek ma symbol O?', 'Tlen'],
+      ['W którym roku Polska weszła do UE?', '2004'],
+      ['Największy kontynent?', 'Azja'],
+      ['Język najczęściej używany na świecie?', 'Angielski'],
+      ['Ile dni ma luty w roku przestępnym?', '29'],
+      ['Stolica Francji?', 'Paryż']
+    ]
+
+    let currentQuestion = 0
+    let score = 0
+
+    function startQuiz() {
+      document.getElementById("startBtn").style.display = "none"
+      document.getElementById("answerInputContainer").style.display = "block"
+      document.getElementById("answerInput").disabled = false
+      document.getElementById("answerInput").focus()
+      askQuestion()
+    }
+
+    function askQuestion() {
+      const qDiv = document.getElementById("question")
+      const counter = document.getElementById("counter")
+      const scoreDiv = document.getElementById("score")
+
+      if (currentQuestion < questions.length) {
+        qDiv.textContent = questions[currentQuestion][0]
+        counter.textContent = `Pytanie ${ currentQuestion + 1 } z ${ questions.length }`
+        scoreDiv.textContent = `Twój wynik: ${ score }`
+        document.getElementById("answerInput").value = ""
+        document.getElementById("nextBtn").style.display = "inline-block"
+      } else {
+        finishQuiz()
+      }
+    }
+
+    function nextQuestion() {
+      const input = document.getElementById("answerInput")
+      const answer = input.value.trim().toLowerCase()
+      const correct = questions[currentQuestion][1].trim().toLowerCase()
+
+      if (answer === correct) {
+        score++
+      }
+
+      currentQuestion++
+      if (currentQuestion < questions.length) {
+        askQuestion()
+      } else {
+        finishQuiz()
+      }
+    }
+
+    function finishQuiz() {
+      const qDiv = document.getElementById("question")
+      const counter = document.getElementById("counter")
+      const input = document.getElementById("answerInput")
+      const scoreDiv = document.getElementById("score")
+
+      qDiv.textContent = "Koniec quizu!"
+      counter.textContent = ""
+      input.disabled = true
+      input.style.display = "none"
+      document.getElementById("nextBtn").style.display = "none"
+      document.getElementById("restartBtn").style.display = "inline-block"
+      scoreDiv.textContent = `Twój końcowy wynik: ${ score } z ${ questions.length }`
+    }
+
+    function restartQuiz() {
+      location.reload()
+    }
+
+    // ENTER jako "Następne pytanie"
+    document.addEventListener("keydown", function (event) {
+      const nextBtnVisible = document.getElementById("nextBtn").style.display !== "none"
+      if (event.key === "Enter" && nextBtnVisible) {
+        nextQuestion()
+      }
+    });
+  </script>
+
+</body>
+
+</html>
