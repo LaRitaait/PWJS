@@ -5,6 +5,7 @@
 - [Lab 3](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab3)
 - [Lab 4](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab4) - Formularz
 - [Lab 5](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab5) 
+- [Lab 6](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab6) 
 
   ## Link do strony
 
