@@ -7,13 +7,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
-    /* Styl dla tła strony */
     body {
+      
       background-color: #f4f7fc;
       font-family: Arial, sans-serif;
     }
 
-    /* Styl kontenera formularza */
     .form-container {
       max-width: 700px;
       margin: 50px auto;
@@ -23,7 +22,6 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
-    /* Styl nagłówka formularza */
     legend {
       font-size: 1.8rem;
       font-weight: bold;
@@ -32,24 +30,20 @@
       margin-bottom: 20px;
     }
 
-    /* Stylowanie etykiet formularza */
     label {
       font-size: 1.1rem;
       font-weight: 500;
     }
 
-    /* Stylowanie grupy formularza */
     .form-group {
       position: relative;
       margin-bottom: 20px;
     }
 
-    /* Ukrywanie komunikatów błędów */
     .hide {
       display: none;
     }
 
-    /* Wyróżnienia dla błędnych i poprawnych pól */
     .has-error input,
     .has-error textarea {
       border-color: #dc3545;
@@ -60,12 +54,10 @@
       border-color: #28a745;
     }
 
-    /* Ikony */
     .bi {
       font-size: 1.5rem;
     }
 
-    /* Ikony przy błędnych i poprawnych polach */
     .has-error .bi {
       color: #dc3545;
     }
@@ -74,13 +66,11 @@
       color: #28a745;
     }
 
-    /* Styl dla alertów błędów */
     .alert {
       margin-top: 5px;
       font-size: 0.875rem;
     }
 
-    /* Wyrównanie przycisku */
     .form-container input[type="submit"] {
       width: 100%;
       padding: 12px;
@@ -98,14 +88,12 @@
       background-color: #0056b3;
     }
 
-    /* Zmniejszenie rozmiarów dla imienia i email */
     .form-control.short {
       max-width: 100%;
       padding: 12px;
       font-size: 1rem;
     }
 
-    /* Zwiększenie rozmiaru pola tekstowego dla informacji */
     .form-control.large {
       min-height: 150px;
       max-height: 200px;
@@ -120,7 +108,6 @@
       <fieldset>
         <legend>Formularz kontaktowy</legend>
 
-        <!-- Imię i nazwisko -->
         <div id="groupName" class="form-group">
           <p id="errorName" class="alert alert-danger hide">Podanie imienia i nazwiska jest wymagane!</p>
           <label for="contactName" class="form-label">Imię i nazwisko</label>
@@ -128,7 +115,6 @@
           <i id="iconName" class="bi position-absolute top-50 end-0 translate-middle-y me-3"></i>
         </div>
 
-        <!-- Adres email -->
         <div id="groupEmail" class="form-group">
           <p id="errorEmail" class="alert alert-danger hide">Podanie poprawnego adresu email jest wymagane!</p>
           <label for="contactEmail" class="form-label">Adres email</label>
@@ -136,7 +122,6 @@
           <i id="iconEmail" class="bi position-absolute top-50 end-0 translate-middle-y me-3"></i>
         </div>
 
-        <!-- Informacja -->
         <div id="groupInfo" class="form-group">
           <p id="errorInfo" class="alert alert-danger hide">Podanie informacji jest wymagane (maks. 250 znaków)!</p>
           <label for="contactInfo" class="form-label">Informacja</label>
@@ -144,14 +129,12 @@
           <i id="iconInfo" class="bi position-absolute top-50 end-0 translate-middle-y me-3"></i>
         </div>
 
-        <!-- Przycisk wyślij -->
         <input type="submit" value="Wyślij">
       </fieldset>
     </form>
   </div>
 
   <script>
-    // Funkcja sprawdzająca imię
     function checkName() {
       const contactName = document.getElementById("contactName");
       const errorName = document.getElementById("errorName");
@@ -172,7 +155,6 @@
       }
     }
 
-    // Funkcja sprawdzająca email
     function checkEmail() {
       const contactEmail = document.getElementById("contactEmail");
       const errorEmail = document.getElementById("errorEmail");
@@ -202,7 +184,6 @@
       }
     }
 
-    // Funkcja sprawdzająca informacje
     function checkInfo() {
       const contactInfo = document.getElementById("contactInfo");
       const errorInfo = document.getElementById("errorInfo");
@@ -231,9 +212,9 @@
       }
     }
 
-    // Funkcja walidująca cały formularz
+
     function checkForm(event) {
-      event.preventDefault(); // Zatrzymuje domyślną akcję formularza (wysyłanie)
+      event.preventDefault();
 
       let error = false;
 
