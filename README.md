@@ -7,7 +7,10 @@
 - [Lab 5](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab5) 
 - [Lab 6](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab6) - Commit i push
 - [Lab 7dev](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab7dev)
-- [Lab 7prod](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab7prod) 
+- [Lab 7prod](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab7prod)
+- [Lab 8dev](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab8dev)
+- [Lab 8prod](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab8prod)
+
 
   ## Link do strony
 
