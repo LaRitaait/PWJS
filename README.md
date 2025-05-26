@@ -10,7 +10,10 @@
 - [Lab 7prod](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab7prod)
 - [Lab 8dev](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab8dev)
 - [Lab 8prod](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab8prod)
-
+- [Lab 9dev](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab9dev)
+- [Lab 9prod](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab9prod)
+- [Lab 10dev](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab10dev)
+- [Lab 10prod](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab10prod)
 
   ## Link do strony
 
