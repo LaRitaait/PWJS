@@ -7,7 +7,7 @@
 - [Lab 5](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab5) - Commit i push
 - [Lab 6](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab6) - Commit i push
 
-  ## React
+## React
 
 - [Lab 7dev](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab7dev) - Kod
 - [Lab 7prod](https://github.com//LaRitaait/PWJS/tree/main/ZofiaGłowacka21234/Lab7prod) - Wersja produkcyjna
