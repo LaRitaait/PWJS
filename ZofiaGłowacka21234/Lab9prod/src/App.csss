@@ -1,0 +1,80 @@
+/* Ustawienie ładnej czcionki i tła */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffe4e6, #d0f0fd);
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Kontener całej aplikacji */
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Tytuły ćwiczeń */
+h1 {
+  color: #c06c84; /* pastelowy róż */
+  font-weight: 700;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #c06c84;
+  padding-bottom: 5px;
+}
+
+/* Linie oddzielające ćwiczenia */
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 30px 0;
+}
+
+/* Lista produktów i przyciski */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+/* Przyciski w pastelowych kolorach */
+button {
+  background-color: #89c2d9; /* pastelowy błękit */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5a9ec9;
+}
+
+/* Przyciski usuwania z innym kolorem */
+li button {
+  background-color: #f67280; /* pastelowy róż */
+  margin-left: 10px;
+}
+
+li button:hover {
+  background-color: #c05060;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #6c5b7b; /* ciemniejszy fioletowy odcień dla kontrastu */
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 900;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
